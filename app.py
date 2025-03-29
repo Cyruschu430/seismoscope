@@ -167,13 +167,13 @@ def main():
                     it gets released suddenly — causing an earthquake.
                     """)
                 with col_eq2:
-                    st.image("assets/earthquake.png", caption="How earthquakes happen", use_column_width=True)
+                    st.image("assets/earthquake.png", caption="How earthquakes happen", use_container_width=True)
 
                 st.markdown("---")
                 st.markdown("### 🌋 Where Are Earthquakes Most Common?")
                 col_ring1, col_ring2 = st.columns([1.5, 2])
                 with col_ring1:
-                    st.image("assets/pacific-ring-of-fire.png", caption="Pacific Ring of Fire", use_column_width=True)
+                    st.image("assets/pacific-ring-of-fire.png", caption="Pacific Ring of Fire", use_container_width=True)
                 with col_ring2:
                     st.markdown("""
                     The **Pacific Ring of Fire** is the most earthquake-prone region on Earth.
@@ -203,7 +203,7 @@ def main():
                     - Water, food, flashlight, radio, batteries, first aid supplies.
                     """)
                 with col_safety2:
-                    st.image("assets/safety_tips.png", caption="Earthquake safety checklist", use_column_width=True)
+                    st.image("assets/safety_tips.png", caption="Earthquake safety checklist", use_container_width=True)
 
             with st.expander("🧪 Earthquake Quick Quiz"):
                 st.markdown("Test your earthquake knowledge!")
