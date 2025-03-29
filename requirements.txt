@@ -4,3 +4,4 @@ requests
 pydeck
 matplotlib
 seaborn
+openpyxl
