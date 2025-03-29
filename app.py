@@ -70,10 +70,10 @@ def main():
             (df["time"] <= pd.to_datetime(end_datetime))
         ].copy()
 
-        tab1, tab2, tab3, tab4 = st.tabs(["🗺 Map", "📊 Table", "📈 Analysis", "📚 Learn"])
+        tab1, tab2, tab3, tab4 = st.tabs(["🗽 Map", "📊 Table", "📈 Analysis", "📚 Learn"])
 
         with tab1:
-            st.subheader("🗺 Earthquake Map")
+            st.subheader("🗽 Earthquake Map")
             st.markdown("> **Map Description:** This interactive map displays global earthquakes. Each circle represents an earthquake. The size is scaled by magnitude. Use the filters on the sidebar to refine the results.")
 
             scatter_layer = pdk.Layer(
@@ -145,7 +145,7 @@ def main():
                 st.pyplot(fig2)
 
         with tab4:
-            with st.expander("🧠 Learn More: What is an Earthquake?"):
+            with st.expander("🧐 Learn More: What is an Earthquake?"):
                 st.markdown("### 🌍 What Is an Earthquake?")
                 st.markdown("""
                 An earthquake is the shaking of the Earth's surface caused by a sudden release of energy in the planet’s crust.
@@ -154,7 +154,7 @@ def main():
                 st.image("assets/plate_tectonics.gif", caption="Tectonic plate movement", width=400)
 
                 st.markdown("---")
-                st.markdown("### 🧭 Why Do Earthquakes Happen?")
+                st.markdown("### 🧽 Why Do Earthquakes Happen?")
                 col_eq1, col_eq2 = st.columns([2, 1])
                 with col_eq1:
                     st.markdown("""
@@ -183,7 +183,7 @@ def main():
                     """)
 
                 st.markdown("---")
-                st.markdown("### 🛟 Earthquake Safety Tips")
+                st.markdown("### 🚟 Earthquake Safety Tips")
                 col_safety1, col_safety2 = st.columns([2, 1])
                 with col_safety1:
                     st.markdown("""
@@ -252,7 +252,7 @@ def main():
         if auto_refresh:
             st.sidebar.success(f"App will refresh every {refresh_interval} minute(s)...")
             time.sleep(refresh_interval * 60)
-            st.experimental_rerun()
+            st.rerun()
 
     else:
         st.error("Unable to load earthquake data. Please try again later.")
